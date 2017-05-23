@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 
 -- Table structure for table: competitionDetails
 CREATE TABLE IF NOT EXISTS `competitionDetails` (
-    `competitionID` int(11) NOT NULL AUTO_INCREMENT,
+    `competitionId` int(11) NOT NULL AUTO_INCREMENT,
     `name` varchar(100) NOT NULL,
     `noOfQuestions` int(11) NOT NULL,
     `marksPerQuestion` int(11) NOT NULL,
     `negMarking` boolean NOT NULL DEFAULT 0,
     `timeDurationInHrs` int(11) DEFAULT 2,
-    PRIMARY KEY (`competitionID`)
+    PRIMARY KEY (`competitionId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 
