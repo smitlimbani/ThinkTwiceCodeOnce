@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `competitionDetails` (
     `noOfQuestions` int(11) NOT NULL,
     `marksPerQuestion` int(11) NOT NULL,
     `negMarking` boolean NOT NULL DEFAULT 0,
+    `timeDurationInHrs` int(11) DEFAULT 2,
     PRIMARY KEY (`competitionID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
@@ -32,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `competitionDetails` (
 -- Table structure for table: credentials
 CREATE TABLE IF NOT EXISTS `credentials` (
     `userId` int(11) NOT NULL AUTO_INCREMENT,
-    `username` varchar(100),
+    `username` varchar(100) NOT NULL UNIQUE,
     `password` varchar(100) NOT NULL,
     PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
@@ -42,9 +43,9 @@ CREATE TABLE IF NOT EXISTS `credentials` (
 -- Table structure for table: scoreBoard
 CREATE TABLE IF NOT EXISTS `scoreboard` (
     `userId` int(11) NOT NULL AUTO_INCREMENT,
-    `username` varchar(100),
-    `score` varchar(100),
-    PRIMARY KEY(`score`),
+    `username` varchar(100) NOT NULL,
+    `score` int(11) DEFAULT 0,
+    PRIMARY KEY(`userId`),
     FOREIGN KEY(`userId`) REFERENCES credentials(`userId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
@@ -53,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `scoreboard` (
 -- Table structure for table: submissionList
 CREATE TABLE IF NOT EXISTS `submissionList` (
     `submissionId` int(11) NOT NULL AUTO_INCREMENT,
-    `userId` int(11) ,
+    `userId` int(11)  NOT NULL,
     `timeOfSubmission` timestamp DEFAULT CURRENT_TIMESTAMP,
     `status` varchar(100),
     PRIMARY KEY (`submissionId`),
