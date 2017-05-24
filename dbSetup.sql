@@ -71,4 +71,5 @@ CREATE TABLE IF NOT EXISTS `problems` (
   `content` mediumblob NOT NULL,
   `size` int(255) NOT NULL,
   PRIMARY KEY (`problemId`)
+
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
