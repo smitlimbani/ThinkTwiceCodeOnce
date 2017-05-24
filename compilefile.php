@@ -1,6 +1,6 @@
 <?php
 //Import the SDK 
-require_once __DIR__.'/hackerearthAPI/sdk/index.php';
+require_once __DIR__.'/HEapi/sdk/apiConnector.php';
 
 //Setting up the Hackerearth API
 $hackerearth = Array(
