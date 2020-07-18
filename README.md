@@ -1,2 +1,0 @@
-# ThinkTwiceCodeOnce
-A billion edits.
