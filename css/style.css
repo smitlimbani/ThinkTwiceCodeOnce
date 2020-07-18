@@ -1,0 +1,98 @@
+#toast-container {
+  bottom: auto;
+  right: 0;
+  top: 5%;
+  left:auto;
+}
+#box_jay    {  width:130px;
+           height:130px;
+           box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+          border-bottom:2px solid #fff;
+          border-right:2px solid #fff;
+          margin:5% auto 0 auto; 
+          background:url(http://ianfarb.com/wp-content/uploads/2013/10/nicholas-hodag.jpg);
+  background-size:cover;
+border-radius:5px;
+overflow:hidden;}
+
+#box_rv    {  width:130px;
+           height:130px;
+           box-shadow:inset 1px 1px 40px 0 rgba(0,0,0,.45);
+          border-bottom:2px solid #fff;
+          border-right:2px solid #fff;
+          margin:5% auto 0 auto; 
+          background:url('my_image.jpg');
+  background-size:cover;
+border-radius:5px;
+overflow:hidden;}
+
+#overlay    {  background:rgba(0,0,0,.75);
+               text-align:center;
+               padding:10px 0 10px 0;
+               opacity:0;
+               -webkit-transition: opacity .25s ease;
+-moz-transition: opacity .25s ease;}
+
+#box_rv:hover #overlay {
+               opacity:1;}
+
+#box_jay:hover #overlay {
+               opacity:1;}
+
+#plus       {  font-family:Helvetica;
+              
+               color:rgba(255,255,255,.85);
+               font-size:80px;}
+
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+	
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
